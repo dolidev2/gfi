@@ -25,6 +25,7 @@ class PersonnelEditRequest extends FormRequest
             'nom' => 'required',
             'contact' => 'required',
             'agence' => 'required',
+            'statut' => 'required',
         ];
     }
 
@@ -34,6 +35,7 @@ class PersonnelEditRequest extends FormRequest
             'nom.required' => 'Le nom complet est obligatoire',
             'contact.required' => 'Le contact est obligatoire',
             'agence.required' => 'L\'agence est obligatoire',
+            'statut.required' => 'Le statut est obligatoire',
         ];
     }
 }

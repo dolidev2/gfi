@@ -132,6 +132,25 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="mb-20">
+                                                <label for="adresse" class="form-label fw-semibold text-primary-light text-sm mb-8">En activité<span class="text-danger-600">*</span>  </label>
+                                                <select class="form-control radius-8 form-select"  required name="statut" @error('statut') class="border border-danger-600 bg-hover-danger-200 text-danger-600 text-md px-56 py-11 radius-8" @enderror>
+                                                    @if($personnel->statut == env('STATUS_SUCCESS'))
+                                                        <option value="{{ env('STATUS_SUCCESS') }}" selected >Actif</option>
+                                                        <option value="{{ env('STATUS_FAILED') }}" >Inactif</option>
+                                                    @else
+                                                        <option value="{{ env('STATUS_SUCCESS') }}" >Actif</option>
+                                                        <option value="{{ env('STATUS_FAILED') }}" selected >Inactif</option>
+                                                    @endif
+                                                </select>
+                                                @error('statut')
+                                                <span class="text-danger-main fw-semibold">
+                                                      {{ $message }}
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="mb-20">
                                                 <label for="agence" class="form-label fw-semibold text-primary-light text-sm mb-8">Agence <span class="text-danger-600">*</span> </label>
                                                 <select class="form-control radius-8 form-select" id="agences-select" required name="agence">
                                                     @if(isset($agences) && count($agences) > 0 )

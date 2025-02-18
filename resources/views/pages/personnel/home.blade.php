@@ -43,6 +43,7 @@
                         <th scope="col">Matricule</th>
                         <th scope="col">Nom</th>
                         <th scope="col">Contact</th>
+                        <th scope="col">Statut</th>
                         <th scope="col">agence</th>
                     </tr>
                     </thead>
@@ -63,6 +64,11 @@
                             <td><h6 class="text-md mb-0 fw-medium flex-grow-1">{{ $personnel->matricule }}</h6></td>
                             <td><h6 class="text-md mb-0 fw-medium flex-grow-1">{{ $personnel->nom_complet }}</h6></td>
                             <td><h6 class="text-md mb-0 fw-medium flex-grow-1">{{ ($personnel->contact) }}</h6></td>
+                            @if( $personnel->statut == env('STATUS_SUCCESS'))
+                                <td><span class="badge bg-success"> Actif</span></td>
+                            @else
+                                <td><span class="badge bg-danger"> Inactif</span></td>
+                            @endif
                             <td>
                               <h6 class="text-md mb-0 fw-medium flex-grow-1">{{ $personnel->agence->nom }}</h6>
                             </td>

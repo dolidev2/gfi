@@ -103,6 +103,7 @@ class personnelController extends Controller
             $personnel = personnel::find($request->personnel_id);
             $personnel->nom_complet = $request->nom;
             $personnel->contact = $request->contact;
+            $personnel->statut = $request->statut;
             $personnel->adresse = $request->adresse;
             $personnel->agence_id = $request->agence;
 
