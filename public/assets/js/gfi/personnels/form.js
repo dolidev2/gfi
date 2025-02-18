@@ -2,11 +2,11 @@ $(document).ready(function () {
 
     $('#btn-edit').click(function (){
 
-        var client_input_check = document.querySelectorAll('#client-input-check');
+        var personnel_input_check = document.querySelectorAll('#personnel-input-check');
         var data = [];
 
         // Verify if checkboxes are checked
-        client_input_check.forEach(event => {
+        personnel_input_check.forEach(event => {
             if(event.checked){
                 data.push(event);
             }
@@ -42,55 +42,13 @@ $(document).ready(function () {
             }).showToast();
         }
     });
-    $('#btn-view').click(function (){
-
-        var client_input_check = document.querySelectorAll('#client-input-check');
-        var data = [];
-
-        // Verify if checkboxes are checked
-        client_input_check.forEach(event => {
-            if(event.checked){
-                data.push(event);
-            }
-        });
-
-        if(data.length == 0){
-            Toastify({
-                text: "Aucune ligne sélectionnée",
-                className: "info",
-                duration:4000,
-                close: true,
-                style: {
-                    background: "linear-gradient(to right, blue, purple)",
-                }
-            }).showToast();
-        }
-
-        if( data.length == 1){
-
-            window.location.href = "view/"+data[0].value;
-        }
-
-        if( data.length >= 2){
-
-            Toastify({
-                text: "Sélectionnez une seule ligne",
-                className: "error",
-                duration:4000,
-                close: true,
-                style: {
-                    background: "linear-gradient(to right, red, orange)",
-                }
-            }).showToast();
-        }
-    });
 
     $('#btn-delete').click(function (){
-        var client_input_check = document.querySelectorAll('#client-input-check');
+        var personnel_input_check = document.querySelectorAll('#personnel-input-check');
         var data = [];
 
         // Verify if checkboxes are checked
-        client_input_check.forEach(event => {
+        personnel_input_check.forEach(event => {
             if(event.checked){
                 data.push(event);
             }
@@ -125,7 +83,7 @@ $(document).ready(function () {
                                 if(response == 0 ){
                                     Swal.fire({
                                         title: 'Bravo',
-                                        text: 'L\agence a été supprimée avec succès',
+                                        text: 'Le collaborateur a été supprimée avec succès',
                                         icon: 'success',
                                     });
                                 } else if( response == 1){

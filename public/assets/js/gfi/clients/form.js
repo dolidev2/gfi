@@ -125,7 +125,7 @@ $(document).ready(function () {
                                 if(response == 0 ){
                                     Swal.fire({
                                         title: 'Bravo',
-                                        text: 'L\agence a été supprimée avec succès',
+                                        text: 'Le client a été supprimée avec succès',
                                         icon: 'success',
                                     });
                                 } else if( response == 1){

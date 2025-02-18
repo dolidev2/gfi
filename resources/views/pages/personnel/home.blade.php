@@ -2,7 +2,7 @@
 @section('content')
     <div class="dashboard-main-body">
         <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-24">
-            <h6 class="fw-semibold mb-0">Client</h6>
+            <h6 class="fw-semibold mb-0">Personnels</h6>
             <ul class="d-flex align-items-center gap-2">
                 <li class="fw-medium">
                     <a href="{{ route('personnels.list') }}" class="d-flex align-items-center gap-1 hover-text-primary">
@@ -18,9 +18,6 @@
         <div class="card basic-data-table">
             <div class="card-header border-bottom bg-base py-16 px-24 d-flex align-items-center flex-wrap gap-3 justify-content-between">
                 <div class="d-flex align-items-center flex-wrap gap-3">
-                    <button id="btn-view" class="w-32-px h-32-px bg-primary-light text-primary-600 rounded-circle d-inline-flex align-items-center justify-content-center">
-                        <iconify-icon icon="iconamoon:eye-light"></iconify-icon>
-                    </button>
                     <button id="btn-edit" type="button" class="w-32-px h-32-px bg-success-focus text-success-main rounded-circle d-inline-flex align-items-center justify-content-center">
                         <iconify-icon icon="lucide:edit"></iconify-icon>
                     </button>
